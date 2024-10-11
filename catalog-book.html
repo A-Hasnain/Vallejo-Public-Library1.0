@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Book - Vallejo Public Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="library-logo.png" alt="Library Logo"> <!-- Placeholder for the library logo -->
+            <h1>Vallejo Public Library</h1>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="reserve.html">Reserve Book</a></li>
+            <li><a href="catalog-book.html">Catalog Search</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="performSearch()">Search</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Advanced Search and Filter -->
+        <div class="advanced-search-container">
+            <button class="advanced-button">Advanced Search</button>
+            <button class="filter-button">Filter</button>
+        </div>
+
+        <!-- Catalog Section -->
+        <section class="catalog">
+            <div class="books-section">
+                <!-- Book 1: Night of the Living Dummy -->
+                <div class="book-details">
+                    <div class="book-photo">
+                        <!-- Placeholder for book image with cross -->
+                        <img src="placeholder.png" alt="Night of the Living Dummy">
+                    </div>
+                    <div class="book-info">
+                        <h2>Night of the Living Dummy</h2>
+                        <p><strong>Author:</strong> R.L. Stine</p>
+                        <p><strong>Year:</strong> 1993</p>
+                        <p><strong>Genre:</strong> Horror</p>
+                        <p><strong>Summary:</strong> In this chilling tale, twin sisters discover an eerie ventriloquist dummy named Slappy who seems to have a life of his own. As strange things start happening, they realize Slappy may be more than just a toy.</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <h3>Total Copies</h3>
+                            <p>10</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Availability</h3>
+                            <p>5 available</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <a href="reserve.html" class="action-button">Reserve This Book</a>
+                        <button class="action-button">Save for Later</button>
+                    </div>
+                </div>
+
+                <!-- Book 2: Diary of a Wimpy Kid -->
+                <div class="book-details">
+                    <div class="book-photo">
+                        <!-- Placeholder for book image with cross -->
+                        <img src="placeholder.png" alt="Diary of a Wimpy Kid">
+                    </div>
+                    <div class="book-info">
+                        <h2>Diary of a Wimpy Kid</h2>
+                        <p><strong>Author:</strong> Jeff Kinney</p>
+                        <p><strong>Year:</strong> 2007</p>
+                        <p><strong>Genre:</strong> Comedy</p>
+                        <p><strong>Summary:</strong> This humorous book follows middle schooler Greg Heffley as he navigates the awkwardness of growing up, dealing with bullies, friendships, and family in his day-to-day life, all documented in his diary.</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <h3>Total Copies</h3>
+                            <p>15</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Availability</h3>
+                            <p>2 available</p>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <a href="reserve.html" class="action-button">Reserve This Book</a>
+                        <button class="action-button">Save for Later</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vallejo Public Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            if (query.includes("book")) {
+                window.location.href = "catalog-book.html";
+            } else if (query.includes("card")) {
+                window.location.href = "library-card.html";
+            } else if (query.includes("contact")) {
+                window.location.href = "contact.html";
+            } else if (query.includes("login") || query.includes("sign up")) {
+                window.location.href = "login.html";
+            } else {
+                alert("No matching results found.");
+            }
+        }
+    </script>
+
+</body>
+</html>
